@@ -25,13 +25,13 @@ function App() {
     }
   };
 
-  const savePlaylistToLocalStorage = () => {
+  const savePlaylistToLocalStorage = useCallback(() => {
     const savedPlaylist = {
       playlistName,
       playlistTracks,
     };
     window.localStorage.setItem('MY_SAVE_PLAYLIST', JSON.stringify(savedPlaylist));
-  };
+  }, [playlistName, playlistTracks]);
 
   const addTrack = (track) => {
     const actualPlaylist = playlistTracks.map((track) => track.id);
@@ -47,7 +47,7 @@ function App() {
 
   useEffect(() => {
     savePlaylistToLocalStorage();
-  }, [playlistName, playlistTracks, savePlaylistToLocalStorage]);
+  }, [savePlaylistToLocalStorage]);
 
   useEffect(() => {
     const actualPlaylist = playlistTracks.map((track) => track.id);
