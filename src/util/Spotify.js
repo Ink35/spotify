@@ -1,7 +1,7 @@
 let accessToken = "";
 let expirationTime;
 const clientId = "7cee5cc40f99455d97fdc907b45a6dc0";
-const redirectUri = "http://localhost:3000/";
+const redirectUri = "https://spotify-playlist-maker-ink.netlify.app/";
 
 const getAccessToken = () => {
   if (accessToken && Date.now() < expirationTime) {
