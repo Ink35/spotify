@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import './Styles/App.css';
 import Playlist from './component/Playlist';
 import SearchBar from './component/SearchBar';
