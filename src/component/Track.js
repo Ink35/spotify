@@ -23,7 +23,7 @@ const Track = (props) => {
         <div className='Track'>
             <div className='Track-information'>
                 <h3>{props.track.name}</h3>
-                <p>{props.track.artist} | <a href={props.track.albumLink} target='_blank'>{props.track.album}</a></p>
+                <p>{props.track.artist} | <a href={props.track.albumLink} target='_blank' rel='noreferrer'>{props.track.album}</a></p>
             </div> 
             {renderAction()}
         </div>

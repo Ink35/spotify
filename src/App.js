@@ -47,7 +47,7 @@ function App() {
 
   useEffect(() => {
     savePlaylistToLocalStorage();
-  }, [playlistName, playlistTracks]);
+  }, [playlistName, playlistTracks, savePlaylistToLocalStorage]);
 
   useEffect(() => {
     const actualPlaylist = playlistTracks.map((track) => track.id);
