@@ -15,7 +15,8 @@ function SearchBar(props){
 
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {
-            search()
+            e.preventDefault();
+            search();
         }
     }
 
